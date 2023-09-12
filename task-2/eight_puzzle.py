@@ -49,6 +49,13 @@ def h1(s):
     return res
 
 def h3(s):
-    # implement this function
+    goal = (1, 2, 3, 4, 5, 6, 7, 8, 0)
     board, _, _ = s
-    return 0
+    mismatch_count = 0
+
+    for i in range(3):
+        for j in range(3):
+            if board[i * 3 + j] != goal[i * 3 + j]:
+                mismatch_count += 1
+
+    return mismatch_count
